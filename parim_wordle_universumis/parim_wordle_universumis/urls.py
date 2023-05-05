@@ -15,9 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-import parim_wordle_universumis.wordle
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", parim_wordle_universumis.wordle.urls)
+    path("", include("wordle.urls"))
 ]
