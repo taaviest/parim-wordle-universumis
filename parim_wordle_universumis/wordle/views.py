@@ -9,3 +9,7 @@ def pealeht(request):
         "sonad":sonastik
     }
     return render(request, "wordle/pealeht.html", context)
+
+
+def controller(request):
+    
