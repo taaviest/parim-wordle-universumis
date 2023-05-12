@@ -10,6 +10,3 @@ def pealeht(request):
     }
     return render(request, "wordle/pealeht.html", context)
 
-
-def controller(request):
-    
