@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            input {
+                width: 10px;
+            }
+            #submit {
+                width: auto;
+            }
+        </style>
+    </head>
     <body>
-        <h1>Wordle/h1>
-        <form></form>
-        <b>{{I_taht}}    </b><b>{{II_taht}}    </b><b>{{III_taht}}    </b><b>{{IV_taht}}    </b><b>{{V_taht}}</b>
+        <h1>Wordle</h1>
+        <form action="/kontroll/" method="POST">
+            {% csrf_token %}
+            <input type="text" id="taht1" name="taht1" value="" maxlength="1">
+            <input type="text" id="taht2" name="taht2" value="">
+            <input type="text" id="taht3" name="taht3" value="">
+            <input type="text" id="taht4" name="taht4" value="">
+            <input type="text" id="taht5" name="taht5" value="">
+            <input type="hidden" name="ok" value="ok">
+            <input type="submit" id="submit" name="submit" value="Submit">
+        </form>
+        <b>{{sonum}}</b>
     </body>
 </html>
