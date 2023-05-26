@@ -2,137 +2,216 @@
 <html>
     <head>
         <style>
-            .Row,.Row-letter {
-    display: flex;
-    justify-content: center
-}
-
-.Row-letter {
-    align-items: center;
-    border: 2px solid #dee1e9;
-    font-size: 28px;
-    font-weight: 700;
-    height: 56px;
-    margin: 3px;
-    text-transform: uppercase;
-    width: 56px;
-    border-radius: 5px;
-    color: #393e4c;
-    background: #fbfcff
-}
-
-.Row-letter.selected {
-    border-color: #a7adc0
-}
-
-html.dark .Row-letter {
-    color: #fff;
-    background: #191a24;
-    border: 2px solid #414458
-}
-
-html.dark .Row-letter.selected {
-    border-color: #7b7f98
-}
-
-sup {
-    top: -1.5em;
-    width: 0;
-    font-size: 11px
-}
-
-input {
-    width: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-form {
-    margin-left: auto;
-    margin-right: auto;
-}
-#submit {
-        width: auto;
-}
-html {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+            .Row,
+            .Row-letter {
+                display: flex;
+                justify-content: center
+            }
+    
+            .Row-letter {
+                align-items: center;
+                border: 2px solid #dee1e9;
+                font-size: 28px;
+                font-weight: 700;
+                height: 56px;
+                margin: 3px;
+                text-transform: uppercase;
+                width: 56px;
+                border-radius: 5px;
+                color: #393e4c;
+                background: #fbfcff
+            }
+    
+            .Row-letter.selected {
+                border-color: #a7adc0
+            }
+    
+            html.dark .Row-letter {
+                color: #fff;
+                background: #191a24;
+                border: 2px solid #414458
+            }
+    
+            html.dark .Row-letter.selected {
+                border-color: #7b7f98
+            }
+    
+            sup {
+                top: -1.5em;
+                width: 0;
+                font-size: 11px
+            }
+    
+            input {
+                width: 10px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            form {
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            #submit {
+                width: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+    
+            html {
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
             }
         </style>
     </head>
+    
     <body>
         <h1>Wordle</h1>
         <div class="game_rows">
-        <div class="Row">
-        <div class="Row-letter selected" data-animation="pop">
-        <sup style="display: none;"></sup>
-    </div>
-
-    <div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup>
-    </div>
-        <div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup>
-    </div>
-</div>
-<div class="Row">
-        <div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div></div><div class="Row">
-        <div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup>
-        </div><div class="Row-letter" data-animation="none">
-            <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div></div><div class="Row">
-        <div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;"></sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div>
-        <div class="Row-letter" data-animation="none">
-        <sup style="display: none;"></sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;"></sup></div></div><div class="Row">
-        <div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;">
-        </sup></div><div class="Row-letter" data-animation="none">
-        <sup style="display: none;"></sup>
-    </div><div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div><div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div></div><div class="Row"><div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div><div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div><div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div><div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div><div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div></div></div>
-       <div> <form action="/kontroll/" method="POST">
+            <div class="Row">
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;"></sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;"></sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;"></sup>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+                <div class="Row-letter" data-animation="none">
+                    <sup style="display: none;">
+                    </sup>
+                </div>
+            </div>
+        </div>
+       
+    <div>
+        <form action="/kontroll/" method="POST">
             {% csrf_token %}
             <input type="text" id="taht1" name="taht1" value="" maxlength="1">
-            <input type="text" id="taht2" name="taht2" value="">
-            <input type="text" id="taht3" name="taht3" value="">
-            <input type="text" id="taht4" name="taht4" value="">
-            <input type="text" id="taht5" name="taht5" value="">
-            <input type="hidden" name="ok" value="ok">
-            <input type="submit" id="submit" name="submit" value="Submit">
+            <input type="text" id="taht2" name="taht2" value="" maxlength="1">
+            <input type="text" id="taht3" name="taht3" value="" maxlength="1">
+            <input type="text" id="taht4" name="taht4" value="" maxlength="1">
+            <input type="text" id="taht5" name="taht5" value="" maxlength="1">
+            <div><input type="submit" id="submit" name="submit" value=""></div>
         </form>
-       </div> 
-      
-        <b>{{sonum}}</b>
+    </div>
+    <b>{{sonum}}</b>
     </body>
 </html>
