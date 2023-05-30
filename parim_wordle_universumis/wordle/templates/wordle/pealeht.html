@@ -66,12 +66,12 @@
             }
         </style>
     </head>
-    
     <body>
         <h1>Wordle</h1>
         <div class="game_rows">
             <div class="Row">
                 <div class="Row-letter" data-animation="none">
+                    {{taht1_1}}
                     <sup style="display: none;"></sup>
                 </div>
                 <div class="Row-letter" data-animation="none">
@@ -153,28 +153,6 @@
                 </div>
                 <div class="Row-letter" data-animation="none">
                     <sup style="display: none;"></sup>
-                </div>
-            </div>
-            <div class="Row">
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
                 </div>
             </div>
             <div class="Row">
@@ -200,7 +178,6 @@
                 </div>
             </div>
         </div>
-       
     <div>
         <form action="/kontroll/" method="POST">
             {% csrf_token %}
