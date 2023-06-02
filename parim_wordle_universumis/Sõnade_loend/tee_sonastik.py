@@ -1,12 +1,11 @@
 f1 = open("sonad.txt", "r", encoding="ansi")
-f2 = open("valmis_sonad.txt", "w", encoding="utf-8")
+f2 = open("valmis_sonad.py", "w", encoding="utf-8")
 tekst = f1.readlines()
-sonastik = {}
+sonade_list = []
 for rida in tekst:
     rida = rida.strip().lower()
     if len(rida) == 5 and "-" not in rida:
-        sonastik[rida]=list(rida)
-mitu_sona = len(sonastik)
-f2.write("sonastik = "+str(sonastik)+"\nmitu_sona = "+str(mitu_sona))
+        sonade_list.append(rida)
+f2.write("sonade_list = "+str(sonade_list))
 f1.close()
 f2.close()
