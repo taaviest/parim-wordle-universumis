@@ -3,7 +3,7 @@ from django.shortcuts import HttpResponse, HttpResponseRedirect, render
 from django.template import Library
 from wordle.models import mang
 from django.urls import reverse
-from Sõnade_loend.valmis_sonad import sonastik
+from Sõnade_loend.valmis_sonad import sonade_list
 import random as r
 
 # Create your views here.
@@ -12,9 +12,9 @@ def algus(request):
     global mangu_id
     global mitmes
     mitmes = 1
-    sonade_arv = len(sonastik)-1
+    sonade_arv = len(sonade_list)-1
     mitmes = r.randint(0, sonade_arv)
-    oige_sona  = list(sonastik.keys())[mitmes]
+    oige_sona  = sonade_list[mitmes]
     uus_mang = mang(oige_sona=oige_sona, sona1="     ", sona2="     ",sona3="     ",sona4="     ",sona5="     ")
     uus_mang.save()
     mangu_id = uus_mang.id
