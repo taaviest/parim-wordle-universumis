@@ -76,7 +76,6 @@ def kontroll(request):
         elif mitmes == 5:
             mangu_objekt.sona5 = sona
             mangu_objekt.save()
-        mitmes += 1
         sona1 = list(mangu_objekt.sona1)
         sona2 = list(mangu_objekt.sona2)
         sona3 = list(mangu_objekt.sona3)

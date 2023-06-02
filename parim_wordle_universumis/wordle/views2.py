@@ -1,5 +1,15 @@
 from django.shortcuts import render
 import random
+from views import *
+from Sõnade_loend.valmis_sonad import sonastik
+from urllib.request import HTTPRedirectHandler
+from django.shortcuts import HttpResponse, HttpResponseRedirect, render
+from django.template import Library
+from wordle.models import mang
+from django.urls import reverse
+from Sõnade_loend.valmis_sonad import sonastik
+import random as r
+
 
 letters = ["A", "B", "C", "D", "E"]
 
@@ -54,3 +64,46 @@ def letter_view(request):
         "message": message,
         "position_message": position_message,
     })
+
+
+def sonastiku_kontroll(request): 
+    mangu_objekt = mang.objects.get(id=mangu_id)
+    sona1 = (mangu_objekt.sona1)
+    sona2 = (mangu_objekt.sona2)
+    sona3 = (mangu_objekt.sona3)
+    sona4 = (mangu_objekt.sona4)
+    sona5 = (mangu_objekt.sona5)
+
+    if mitmes == 0:
+        if sona1 in sonade_list:
+            print("sona on sonastikus")
+            mitmes += 1
+
+        else:
+            mangu_objekt.sona1 = "     "
+    if mitmes == 1:
+        if sona2 in sonade_list:
+            print("sona on sonastikus")
+            mitmes += 1
+        else:
+            mangu_objekt.sona2 = "     "
+        
+    if mitmes == 2:
+        if sona3 in sonade_list:
+            print("sona on sonastikus")
+            mitmes += 1
+
+        else:
+            mangu_objekt.sona3 = "     "
+    if mitmes == 3:
+        if sona4 in sonade_list:
+            print("sona on sonastikus")
+            mitmes += 1
+        else:
+            mangu_objekt.sona4 = "     "
+    if mitmes == 4:
+        if sona5 in sonade_list:
+            print("sona on sonastikus")
+            mitmes += 1
+        else:
+            mangu_objekt.sona5 = "     "
