@@ -15,7 +15,7 @@ def algus(request):
     sonade_arv = len(sonade_list)-1
     mitmes = r.randint(0, sonade_arv)
     oige_sona  = sonade_list[mitmes]
-    uus_mang = mang(oige_sona=oige_sona, sona1="     ", sona2="     ",sona3="     ",sona4="     ",sona5="     ")
+    uus_mang = mang(oige_sona=oige_sona)
     uus_mang.save()
     mangu_id = uus_mang.id
     print(oige_sona)
@@ -76,11 +76,11 @@ def kontroll(request):
         elif mitmes == 5:
             mangu_objekt.sona5 = sona
             mangu_objekt.save()
-        sona1 = list(mangu_objekt.sona1)
-        sona2 = list(mangu_objekt.sona2)
-        sona3 = list(mangu_objekt.sona3)
-        sona4 = list(mangu_objekt.sona4)
-        sona5 = list(mangu_objekt.sona5)
+        sona1 = list(mangu_objekt.sona1[0])
+        sona2 = list(mangu_objekt.sona2[0])
+        sona3 = list(mangu_objekt.sona3[0])
+        sona4 = list(mangu_objekt.sona4[0])
+        sona5 = list(mangu_objekt.sona5[0])
         context = {
             "taht1_1": sona1[0],
             "taht1_2": sona1[1],
