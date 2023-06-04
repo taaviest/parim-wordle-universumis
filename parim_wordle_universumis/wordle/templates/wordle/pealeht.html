@@ -88,7 +88,7 @@
             }
     
             #submit {
-                width: auto;
+                width: auto !important;
                 margin-top: 10px;
                 margin-bottom: 10px;
             }
@@ -98,131 +98,167 @@
                 margin-right: auto;
                 text-align: center;
             }
+            a {
+            padding: 6px;
+            border: 1px solid black;
+            border-radius: 5px;            
+            }
+            a:hover {
+                background-color: aqua;
+            }
         </style>
     </head>
     <body>
+        <a style="text-align: left !important;" href="{%url "algus"%}">Uus mäng</a>
         <h1>Wordle</h1>
         <div class="game_rows">
             <div class="Row">
-                <div class="Row-letter" data-animation="none">
-                    {{sona1.6}}
+                <div style="background-color: {{sona1.5}};" class="Row-letter" data-animation="none">
+                    {{ sona1.0 }}
                     <sup style="display: none;"></sup>
                 </div>
-                <div class="Row-letter" data-animation="none">
+                <div style="background-color: {{sona1.6}};" class="Row-letter" data-animation="none">
+                    {{sona1.1}}
                     <sup style="display: none;">
                     </sup>
                 </div>
-                <div class="Row-letter" data-animation="none">
+                <div style="background-color: {{sona1.7}};" class="Row-letter" data-animation="none">
+                    {{sona1.2}}
                     <sup style="display: none;">
                     </sup>
                 </div>
-                <div class="Row-letter" data-animation="none">
+                <div style="background-color: {{sona1.8}};" class="Row-letter" data-animation="none">
+                    {{sona1.3}}
                     <sup style="display: none;">
                     </sup>
                 </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-            </div>
-            <div class="Row">
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
+                <div style="background-color: {{sona1.9}};" class="Row-letter" data-animation="none">
+                    {{sona1.4}}
                     <sup style="display: none;">
                     </sup>
                 </div>
             </div>
             <div class="Row">
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-            </div>
-            <div class="Row">
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
-                    </sup>
-                </div>
-                <div class="Row-letter" data-animation="none">
+                <div style="background-color: {{sona2.5}};" class="Row-letter" data-animation="none">
+                    {{ sona2.0 }}
                     <sup style="display: none;"></sup>
+                    </sup>
                 </div>
-                <div class="Row-letter" data-animation="none">
+                <div style="background-color: {{sona2.6}};" class="Row-letter" data-animation="none">
+                    {{ sona2.1 }}
                     <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+                <div style="background-color: {{sona2.7}};" class="Row-letter" data-animation="none">
+                    {{ sona2.2 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+                <div style="background-color: {{sona2.8}};" class="Row-letter" data-animation="none">
+                    {{ sona2.3 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+                <div style="background-color: {{sona2.9}};" class="Row-letter" data-animation="none">
+                    {{ sona2.4 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
                 </div>
             </div>
             <div class="Row">
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
+                <div style="background-color: {{sona3.5}};" class="Row-letter" data-animation="none">
+                    {{ sona3.0 }}
+                    <sup style="display: none;"></sup>
                     </sup>
                 </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
+                <div style="background-color: {{sona3.6}};" class="Row-letter" data-animation="none">
+                    {{ sona3.1 }}
+                    <sup style="display: none;"></sup>
                     </sup>
                 </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
+                <div style="background-color: {{sona3.7}};" class="Row-letter" data-animation="none">
+                    {{ sona3.2 }}
+                    <sup style="display: none;"></sup>
                     </sup>
                 </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
+                <div style="background-color: {{sona3.8}};" class="Row-letter" data-animation="none">
+                    {{ sona3.3 }}
+                    <sup style="display: none;"></sup>
                     </sup>
                 </div>
-                <div class="Row-letter" data-animation="none">
-                    <sup style="display: none;">
+                <div style="background-color: {{sona3.9}};" class="Row-letter" data-animation="none">
+                    {{ sona3.4 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+            </div>
+            <div class="Row">
+                <div style="background-color: {{sona4.5}};" class="Row-letter" data-animation="none">
+                    {{ sona4.0 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+                <div style="background-color: {{sona4.6}};" class="Row-letter" data-animation="none">
+                    {{ sona4.1 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+                <div style="background-color: {{sona4.7}};" class="Row-letter" data-animation="none">
+                    {{ sona4.2 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+                <div style="background-color: {{sona4.8}};" class="Row-letter" data-animation="none">
+                    {{ sona4.3 }}
+                    <sup style="display: none;"></sup></sup>
+                </div>
+                <div style="background-color: {{sona4.9}};" class="Row-letter" data-animation="none">
+                    {{ sona4.4 }}
+                    <sup style="display: none;"></sup></sup>
+                </div>
+            </div>
+            <div class="Row">
+                <div style="background-color: {{sona5.5}};" class="Row-letter" data-animation="none">
+                    {{ sona5.0 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+                <div style="background-color: {{sona5.6}};" class="Row-letter" data-animation="none">
+                    {{ sona5.1 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+                <div style="background-color: {{sona5.7}};" class="Row-letter" data-animation="none">
+                    {{ sona5.2 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+                <div style="background-color: {{sona5.8}};" class="Row-letter" data-animation="none">
+                    {{ sona5.3 }}
+                    <sup style="display: none;"></sup>
+                    </sup>
+                </div>
+                <div style="background-color: {{sona5.9}};" class="Row-letter" data-animation="none">
+                    {{ sona5.4 }}
+                    <sup style="display: none;"></sup>
                     </sup>
                 </div>
             </div>
         </div>
     <div>
-        <form action="/kontroll/" method="POST">
+        <form action="{%url "kontroll"%}" method="POST">
             {% csrf_token %}
             <input type="text" id="taht1" name="taht1" value="" maxlength="1">
             <input type="text" id="taht2" name="taht2" value="" maxlength="1">
             <input type="text" id="taht3" name="taht3" value="" maxlength="1">
             <input type="text" id="taht4" name="taht4" value="" maxlength="1">
             <input type="text" id="taht5" name="taht5" value="" maxlength="1">
-            <div><input type="submit" id="submit" name="submit" value=""></div>
+            <div><input type="submit" id="submit" name="submit" value="Kontroll"></div>
         </form>
     </div>
     <b>{{sonum}}</b>
+    {%if sonum == "Arvasid ära!"%}
+    <a href="{%url "algus"%}">Uus mäng</a>
+    {%endif%}
     </body>
 </html>

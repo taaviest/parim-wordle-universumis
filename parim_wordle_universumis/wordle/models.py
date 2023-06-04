@@ -16,4 +16,4 @@ class mang(models.Model):
     sona5 = models.JSONField(default=list(("", "", "", "", "")))
     sona5_varv = models.JSONField(default=list(("white", "white", "white", "white", "white")))
     def __str__(self):
-        return self.oige_sona+"\n"+self.sona1+"\n"+self.sona1_varv+"\nid: "+self.id
+        return self.oige_sona+"\nid: "+str(self.id)
