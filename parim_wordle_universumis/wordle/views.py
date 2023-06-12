@@ -45,7 +45,7 @@ def kontroll(request):
                         (mangu_objekt.sona1_varv).insert(mitmes_taht, oige_varv)
                         mangu_objekt.save()
                         mitmes_taht += 1
-                    elif taht in list(oige_sona) and oige_sona.count(taht) > 1:
+                    elif taht in list(oige_sona):
                         (mangu_objekt.sona1_varv).pop(mitmes_taht)
                         (mangu_objekt.sona1_varv).insert(mitmes_taht, sees_varv)
                         mangu_objekt.save()
