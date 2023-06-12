@@ -213,7 +213,7 @@
             </div>
         </div>
     <div>
-    {%if sonum != "Arvasid ära!" and mitmes < 5%}
+    {%if sonum != "Arvasid ära!" and mitmes < 6%}
         <form action="{%url "kontroll"%}" method="POST">
             <div><b>Arva sõna:</b></div>
             {% csrf_token %}
@@ -225,13 +225,15 @@
             <div><input type="submit" id="submit" name="submit" value="Kontroll"></div>
         </form>
     </div>
-    <div style="margin-top: 1%;">
+    
     <b>{{sonum}}</b>
     {%else%}
+    <div style="margin-top: 1%;">
     <b>{{sonum}}</b>
     <a href="{%url "algus"%}">Uus mäng</a>
-    {%endif%}
     </div>
+    {%endif%}
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script>
