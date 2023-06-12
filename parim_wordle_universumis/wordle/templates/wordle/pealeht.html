@@ -262,5 +262,16 @@
     {%if sonum == "Arvasid ära!"%}
     <a href="{%url "algus"%}">Uus mäng</a>
     {%endif%}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('input').keyup(function(){
+                    if($(this).val().length==$(this).attr("maxlength")){
+                        $(this).next().focus();
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
