@@ -19,7 +19,7 @@ def algus(request):
     uus_mang.save()
     mangu_id = uus_mang.id
     print(uus_mang)
-    return render(request, "wordle/pealeht.html")
+    return render(request, "wordle/pealeht.html", {"sonum": "Meil on "+str(sonade_arv+1)+" viietähelist sõna.", "mitmes": mitmes,})
 
 def kontroll(request):
     if request.method=="POST":
@@ -178,12 +178,13 @@ def kontroll(request):
             "sona4": sona4,
             "sona5": sona5,
             "sonum": sonum,
+            "mitmes": mitmes,
         }
         if sona == oige_sona:
             context.update({"sonum": "Arvasid ära!"})
             return render(request, "wordle/pealeht.html", context)
             mangu_objekt.delete()
-        elif mitmes >= 5:
+        elif mitmes > 5:
             context.update({"sonum": ("Sa nii noob, õige sõna oli "+oige_sona+" 🤦")})
             return render(request, "wordle/pealeht.html", context)
             mangu_objekt.delete()

@@ -1,4 +1,4 @@
-f1 = open("sonad.txt", "r", encoding="iso_8859_1")
+f1 = open("sonad.txt", "r", encoding="utf-8")
 f2 = open("valmis_sonad.py", "w", encoding="utf-8")
 tekst = f1.readlines()
 sonade_list = []

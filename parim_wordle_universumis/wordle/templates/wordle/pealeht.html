@@ -213,7 +213,7 @@
             </div>
         </div>
     <div>
-    {%if sonum != "Arvasid ära!"%}
+    {%if sonum != "Arvasid ära!" and mitmes < 5%}
         <form action="{%url "kontroll"%}" method="POST">
             <div><b>Arva sõna:</b></div>
             {% csrf_token %}
@@ -224,11 +224,11 @@
             <input type="text" id="taht5" name="taht5" value="" maxlength="1" autocomplete="off">
             <div><input type="submit" id="submit" name="submit" value="Kontroll"></div>
         </form>
-    {%endif%}
     </div>
     <div style="margin-top: 1%;">
     <b>{{sonum}}</b>
-    {%if sonum == "Arvasid ära!"%}
+    {%else%}
+    <b>{{sonum}}</b>
     <a href="{%url "algus"%}">Uus mäng</a>
     {%endif%}
     </div>
